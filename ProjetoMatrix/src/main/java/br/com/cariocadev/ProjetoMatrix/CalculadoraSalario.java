@@ -100,10 +100,7 @@ public class CalculadoraSalario {
         default:
 	    System.out.println("Opção Inválida!");
 	    break;
-    }
-            
-	
-	
+     }	
    }
    else{
           throw new IllegalArgumentException();
