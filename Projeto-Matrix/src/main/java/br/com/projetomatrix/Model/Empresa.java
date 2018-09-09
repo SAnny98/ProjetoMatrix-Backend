@@ -1,36 +1,36 @@
 package br.com.projetomatrix.Model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Getter
-@Setter
+@Table(name = "Empresa")
 public class Empresa {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@NotEmpty
 	private Long Id;
-	@NotNull
-	@NotBlank
+	@NotEmpty
 	private String nome;
-	@NotNull
-	@NotBlank
+	@NotEmpty
 	private String nomeResponsavel;
-	@NotNull
-	@NotBlank
+	@NotEmpty
 	private String contato;
-	@NotNull
-	@NotBlank
-	@Column(length=14) 
+	@NotEmpty
+	@Column(length = 14)
 	private String cnpj;
+	@OneToMany
+	@JoinColumn(name = "empresa_id")
+	private List<Lançamento> lancamento;
 
 }

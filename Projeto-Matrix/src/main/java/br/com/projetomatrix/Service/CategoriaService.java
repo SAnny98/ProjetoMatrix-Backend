@@ -22,13 +22,10 @@ private CategoriaRepository categoriaRepository;
       return categoriaRepository.save(categoria);
 	
 	}
-    public List<Categoria> listar() {
+    public List<Categoria> listar(Long Id) {
       return categoriaRepository.findAll();
     }
-    
-    public Categoria buscar (Long Id) {
-		return categoriaRepository.findById(Id).get();
-	}
+   
 	public void delete (Long Id) {
 	   categoriaRepository.deleteById(Id);
 	}

@@ -10,27 +10,25 @@ import br.com.projetomatrix.Repository.LancamentoRepository;
 @Service
 
 public class LancamentoService {
-@Autowired
+	@Autowired
 
-private LancamentoRepository lancamentoRepository;
+	private LancamentoRepository lancamentoRepository;
 
+	public Lançamento cadastrar(Lançamento lancamento) {
+		return lancamentoRepository.save(lancamento);
+	}
 
-public Lançamento cadastrar (Lançamento lancamento) {
-	  return lancamentoRepository.save(lancamento);
+	public Lançamento atualizar(Lançamento lancamento) {
+		return lancamentoRepository.save(lancamento);
+
 	}
-	
-	public Lançamento atualizar (Lançamento lancamento) {
-    return lancamentoRepository.save(lancamento);
-	
+
+	public List<Lançamento> listar(Long id) {
+		return lancamentoRepository.findAll();
 	}
-  public List<Lançamento> listar() {
-    return lancamentoRepository.findAll();
-  }
-  
-  public Lançamento buscar (Long Id) {
-		return lancamentoRepository.findById(Id).get();
+
+	public void delete(Long Id) {
+		lancamentoRepository.deleteById(Id);
 	}
-	public void delete (Long Id) {
-	   lancamentoRepository.deleteById(Id);
-	} 
+
 }
