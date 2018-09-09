@@ -22,7 +22,7 @@ public class AlunoService {
 
 	public Aluno atualizarAluno(Aluno alunoAtual) {
 		if (alunoAtual != null) {
-			hashAlunos.put(alunoAtual.getMatricula, alunoAtual);
+			hashAlunos.put(alunoAtual.getMatricula(), alunoAtual);
 			return alunoAtual;
 		}
 		throw new IllegalArgumentException();

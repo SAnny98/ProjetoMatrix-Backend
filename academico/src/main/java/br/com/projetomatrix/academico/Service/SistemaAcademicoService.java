@@ -24,8 +24,8 @@ public class SistemaAcademicoService {
 		return alunoService.cadastrarAluno(aluno);
 	}
 
-	public Aluno atualizarAluno(Aluno aluno) {
-		return alunoService.atualizarAluno(aluno);
+	public Aluno atualizarAluno(Aluno alunoAtual) {
+		return alunoService.atualizarAluno(alunoAtual);
 	}
 
 	public void removerAluno(Aluno aluno) {
@@ -37,8 +37,8 @@ public class SistemaAcademicoService {
 		return turmaService.cadastrarTurma(turma);
 	}
 
-	public Turma atualizarTurma(Turma turma) {
-		return turmaService.atualizarTurma(turma);
+	public Turma atualizarTurma(Turma turmaAtual) {
+		return turmaService.atualizarTurma(turmaAtual);
 	}
 
 	public void removerTurma(Turma turma) {
@@ -50,8 +50,8 @@ public class SistemaAcademicoService {
 		return disciplinaService.cadastrarDisciplina(disciplina);
 	}
 
-	public Disciplina atualizarDisci(Disciplina disciplina) {
-		return disciplinaService.atualizarDisciplina(disciplina);
+	public Disciplina atualizarDisci(Disciplina disciplinaAtual) {
+		return disciplinaService.atualizarDisciplina(disciplinaAtual);
 	}
 
 	public void removerDisci(Disciplina disciplina) {
@@ -63,8 +63,8 @@ public class SistemaAcademicoService {
 		return professorService.cadastrarProf(prof);
 	}
 
-	public Professor atualizarProf(Professor prof) {
-		return professorService.atualizarProf(prof);
+	public Professor atualizarProf(Professor profAtual) {
+		return professorService.atualizarProf(profAtual);
 	}
 
 	public void removerProf(Professor prof) {
@@ -76,8 +76,8 @@ public class SistemaAcademicoService {
 		return coordenadorService.cadastrarCoord(coordenador);
 	}
 
-	public Coordenador atualizarCoord(Coordenador coordenador) {
-		return coordenadorService.atualizarCoord(coordenador);
+	public Coordenador atualizarCoord(Coordenador coordenadorAual) {
+		return coordenadorService.atualizarCoord(coordenadorAual);
 	}
 
 	public void removerCoord(Coordenador coordenador) {
@@ -90,7 +90,7 @@ public class SistemaAcademicoService {
 		return cursoService.cadatrarCurso(curso);
 	}
 
-	public Curso atualizarCurso(Curso curso) {
+	public Curso atualizarCurso(Curso cursoAtual) {
 		return cursoService.atualizarCurso(curso);
 	}
 
@@ -103,7 +103,7 @@ public class SistemaAcademicoService {
 		return horarioService.cadastrarHora(hora);
 	}
 
-	public Horário atualizarHora(Horário hora) {
+	public Horário atualizarHora(Horário horaAtual) {
 		return horarioService.atualizarHora(hora);
 	}
 
@@ -117,8 +117,8 @@ public class SistemaAcademicoService {
 		return avaliaçãoService.cadastrarAva(avaliação);
 	}
 
-	public Avaliação atualizarAva(Avaliação avaliação) {
-		return avaliaçãoService.atualizarAva(avaliação);
+	public Avaliação atualizarAva(Avaliação avaliaçãoAtual) {
+		return avaliaçãoService.atualizarAva(avaliaçãoAtual);
 	}
 
 	public void removerAva(Avaliação avaliação) {

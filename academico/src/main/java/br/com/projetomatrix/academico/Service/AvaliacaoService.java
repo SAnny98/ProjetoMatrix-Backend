@@ -8,34 +8,30 @@ import br.com.projetomatrix.academico.Sistema.Avaliação;
 
 public class AvaliacaoService {
 
-	Map<String, Avaliação> hashAvaliacoes = new HashMap<>();
+	private Map<String, Avaliação> hashAvaliacoes = new HashMap<>();
 
 	public Avaliação cadastrarAva(Avaliação avaliacao) {
-		if (avaliacao == null || hashAvaliacoes.containsKey(avaliacao.getCodigo()))
-			throw new IllegalArgumentException("Avaliacao invalida");
 
-		avaliacao.setCodigo(gerarCodigo(avaliacao));
-
-		hashAvaliacoes.put(avaliacao.getCodigo(), avaliacao);
-
-		return avaliacao;
+		if (avaliacao == null) {
+			avaliacao.setCodigo(gerarCodigo(avaliacao));
+			hashAvaliacoes.put(avaliacao.getCodigo(), avaliacao);
+			return avaliacao;
+		}
+		throw new IllegalArgumentException();
 	}
 
-	public Avaliação atualizarAva(Avaliação avaliacaoAtualizada) {
-		if (avaliacaoAtualizada == null)
-			throw new IllegalArgumentException("Dado invalido.");
-
-		hashAvaliacoes.put(avaliacaoAtualizada.getCodigo(), avaliacaoAtualizada);
-
-		return avaliacaoAtualizada;
+	public Avaliação atualizarAva(Avaliação avaliacaoAtual) {
+		if (avaliacaoAtual == null) {
+			hashAvaliacoes.put(avaliacaoAtual.getCodigo(), avaliacaoAtual);
+			return avaliacaoAtual;
+		}
+		throw new IllegalArgumentException();
 
 	}
 
 	public void removerAva(Avaliação avaliacao) {
-		if (avaliacao == null )
-			throw new IllegalArgumentException("Avaliacao não encontrada");
-
+		if (avaliacao != null){
 		hashAvaliacoes.remove(avaliacao.getCodigo());
-	}
+	}throw new IllegalArgumentException();
 
 }

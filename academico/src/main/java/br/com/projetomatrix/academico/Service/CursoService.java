@@ -1,29 +1,36 @@
 package br.com.projetomatrix.academico.Service;
 
-import br.com.projetomatrix.academico.Sistema.Coordenador;
+import java.util.HashMap;
+import java.util.Map;
+
 import br.com.projetomatrix.academico.Sistema.Curso;
 
 public class CursoService {
 
-	private Coordenador coordenador;
-	private List<Disciplina> disciplinas;
-	private String descricao;
-	private String codigo;
-	private String carga_horária;
-	private String pré
-	
+	private Map<String, Curso> hashCursos = new HashMap<>();
+
 	public Curso cadatrarCurso(Curso curso) {
-		// TODO Auto-generated method stub
-		return null;
+
+		if (curso == null) {
+			curso.setCodigo(gerarCodigo(curso));
+			hashCursos.put(curso.getCodigo(), curso);
+			return curso;
+		}
+		throw new IllegalArgumentException();
 	}
 
-	public Curso atualizarCurso(Curso curso) {
-		// TODO Auto-generated method stub
-		return null;
+	public Curso atualizarCurso(Curso cursoAtual) {
+		if (cursoAtual == null) {
+			hashCursos.put(cursoAtual.getCodigo(), cursoAtual);
+			return cursoAtual;
+		}
+		throw new IllegalArgumentException();
 	}
 
 	public void removerCurso(Curso curso) {
-		// TODO Auto-generated method stub
-		
-	}-resquisitos;
+		if (curso != null) {
+			hashCursos.remove(curso.getCodigo());
+		}
+		throw new IllegalArgumentException();
+	}
 }
