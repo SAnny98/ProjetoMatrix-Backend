@@ -91,20 +91,21 @@ public class SistemaAcademicoService {
 	}
 
 	public Curso atualizarCurso(Curso cursoAtual) {
-		return cursoService.atualizarCurso(curso);
+		return cursoService.atualizarCurso(cursoAtual);
 	}
 
 	public void removerCurso(Curso curso) {
 		cursoService.removerCurso(curso);
 	}
 
-	// -----------------------------------------
+	// ----------------------------------------------
+
 	public Horário cadastrarHora(Horário hora) {
 		return horarioService.cadastrarHora(hora);
 	}
 
 	public Horário atualizarHora(Horário horaAtual) {
-		return horarioService.atualizarHora(hora);
+		return horarioService.atualizarHora(horaAtual);
 	}
 
 	public void removerHora(Horário hora) {
